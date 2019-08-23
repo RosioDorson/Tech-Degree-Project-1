@@ -29,8 +29,8 @@ var quotes = [
   },
   {
     quote: 'You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose.',
-    source: ' Dr.Suess',
-    citation: 'Oh, the Places You\'ll Go!',
+    source: ' Dr.Suess ',
+    citation: ' Oh, the Places You\'ll Go!',
     year: '(1990)'
   },
   {
@@ -54,6 +54,9 @@ function printQuote() {
   string = getRandomQuote();
   html = '<p class="quote">' + string.quote + '</p>' + '<p class="source">' + string.source  
   html += '</p>';
+  if ("citation" in string) {
+    html += '<span class="citation">' + string.citation + '</span>'
+  };
   document.getElementById('quote-box').innerHTML = html;
 }
 printQuote();
