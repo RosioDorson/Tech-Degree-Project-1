@@ -9,34 +9,34 @@ Rosio Dorson
 var quotes = [
   {
     quote: 'How did it get so late so soon? Its night before its afternoon. December is here before its June. My goodness how the time has flewn. How did it get so late so soon?',
-    source: ' Dr.Suess'
+    source: ' Dr.Suess '
   },
   {
     quote: 'Today I shall behave, as if this is the day I will be remembered.',
-    source: ' Dr.Suess'
+    source: ' Dr.Suess '
   },
   {
     quote: 'I meant what I said and I said what I meant.',
-    source: ' Dr.Suess'
+    source: ' Dr.Suess '
   },
   {
     quote: 'You’re off to Great Places! Today is your day! Your mountain is waiting, So… get on your way!',
-    source: ' Dr.Suess'
+    source: ' Dr.Suess '
   },
   {
     quote: 'Don’t cry because it’s over. Smile because it happened.',
-    source: 'Dr.Suess'
+    source: ' Dr.Suess '
   },
   {
     quote: 'You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose.',
     source: ' Dr.Suess ',
-    citation: ' Oh, the Places You\'ll Go!',
-    year: '(1990)'
+    citation: '"Oh, The Places You\'ll Go"', 
+    year: "(1990)" 
   },
   {
     quote: 'When he worked, he really worked. But when he played, he really PLAYED.',
     source: ' Dr.Suess'
-  }
+  },
 ];
 
 console.log(quotes);
@@ -52,17 +52,17 @@ function getRandomQuote(){
 
 function printQuote() {
   string = getRandomQuote();
-  html = '<p class="quote">' + string.quote + '</p>' + '<p class="source">' + string.source  
-  html += '</p>';
+  html = '<p class="quote">' + string.quote + '</p>' + '<p class="source">' + string.source 
   if ("citation" in string) {
     html += '<span class="citation">' + string.citation + '</span>'
-  };
+  }
   if ("year" in string) {
     html += '<span class="year">' + string.year + '</span>'
-  };
+  }
+  html += '</p>';
   document.getElementById('quote-box').innerHTML = html;
-}
-printQuote();
+  return html;
+};
 
 // create a function to display a different color randomly //
 
@@ -83,8 +83,8 @@ function diffBackground() {
 
 // Changes the background color after amount of time has passed //
 
-setInterval(printQuote, 3500)
-setInterval(diffBackground, 3500)
+setInterval(printQuote, 5000)
+setInterval(diffBackground, 5000)
 
 // Code to change the background color and quote //
 
