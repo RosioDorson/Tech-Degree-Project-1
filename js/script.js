@@ -57,6 +57,9 @@ function printQuote() {
   if ("citation" in string) {
     html += '<span class="citation">' + string.citation + '</span>'
   };
+  if ("year" in string) {
+    html += '<span class="year">' + string.year + '</span>'
+  };
   document.getElementById('quote-box').innerHTML = html;
 }
 printQuote();
